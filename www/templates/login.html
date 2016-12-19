@@ -1,0 +1,41 @@
+<ion-view view-title="Log Masuk">
+      <ion-content class="padding">
+<center>
+  <left><img src="img/uitm.png"/></left>
+  <right><img src="img/fsk.png"/></right>
+  </center>
+<div class="list">
+<div class="card">
+   <label class="item item-input item-stacked-label">
+   <span class="input-label"> <i class="icon ion-person"></i></span>
+   <input ng-model="user.no" type="number" placeholder="Id Admin">
+   </label>
+
+   <label class="item item-input item-stacked-label">
+   <span class="input-label"><i class="icon ion-locked"></i></span>
+   <input ng-model="user.password" type="password" placeholder="Kata Laluan">
+   </label>
+
+</div>
+<div align="right">
+   <button class="button button-block button-positive" ng-click="login()">
+   Log masuk
+</button>
+
+</div>
+</div>
+</ion-content>
+</ion-view>
+
+
+
+
+
+
+
+
+    
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<ion-view hide-nav-bar="true">
+
+<ion-header-bar class="bar bar-stable">
+     <h1 class="title">Title!</h1>
+      <button class="button icon ion-chevron-left pull-left" ng-click="kembali()">Kembali</button>
+     <button class="button icon ion-home pull-right" ng-click="patahBalik()"></button>
+ </ion-header-bar>
+
+<ion-content class="padding">
+<h1>{{met}}</h1>
+
+<ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+
+<div class="card">
+  <div class="item item-divider">
+    Soalan 1 : Objektif kursus & pengetahuan 
+      yang bakal diperolehi dinyatakan dengan dengan jelas
+  </div>
+  <div class="item item-text-wrap">
+    <i class="icon ion-happy-outline kiri"> {{result11}}</i>
+    <i class="icon ion-happy tengahKiri"> {{result12}}</i>
+    <i class="icon ion-sad-outline tengahKanan"> {{result13}}</i>
+    <i class="icon ion-sad kanan"> {{result14}}</i>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-divider">
+    Soalan 2 : Kandungan kursus tersusun dan mudah difahami
+  </div>
+  <div class="item item-text-wrap">
+   <i class="icon ion-happy-outline kiri"> {{result21}}</i>
+    <i class="icon ion-happy tengahKiri"> {{result22}}</i>
+    <i class="icon ion-sad-outline tengahKanan"> {{result23}}</i>
+    <i class="icon ion-sad kanan"> {{result24}}</i>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-divider">
+    Soalan 3 : Pengurusan kursus
+  </div>
+  <div class="item item-text-wrap">
+    <i class="icon ion-happy-outline kiri"> {{result31}}</i>
+    <i class="icon ion-happy tengahKiri"> {{result32}}</i>
+    <i class="icon ion-sad-outline tengahKanan"> {{result33}}</i>
+    <i class="icon ion-sad kanan"> {{result34}}</i>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-divider">
+    Soalan 4 : Lokasi kursus
+  </div>
+  <div class="item item-text-wrap">
+   <i class="icon ion-happy-outline kiri"> {{result41}}</i>
+    <i class="icon ion-happy tengahKiri"> {{result42}}</i>
+    <i class="icon ion-sad-outline tengahKanan"> {{result43}}</i>
+    <i class="icon ion-sad kanan"> {{result44}}</i>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-divider">
+  Soalan 5 : Penyampaian penceramah sesuai dengan penerimaan peserta
+  </div>
+  <div class="item item-text-wrap">
+   <i class="icon ion-happy-outline kiri"> {{result51}}</i>
+    <i class="icon ion-happy tengahKiri"> {{result52}}</i>
+    <i class="icon ion-sad-outline tengahKanan"> {{result53}}</i>
+    <i class="icon ion-sad kanan"> {{result54}}</i>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-divider">
+  Soalan 6 : Penceramah mempunyai pengetahuan/kemahiran yang luas tentang topik yang diajar
+
+  </div>
+  <div class="item item-text-wrap">
+    <i class="icon ion-happy-outline kiri"> {{result61}}</i>
+    <i class="icon ion-happy tengahKiri"> {{result62}}</i>
+    <i class="icon ion-sad-outline tengahKanan"> {{result63}}</i>
+    <i class="icon ion-sad kanan"> {{result64}}</i>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-divider">
+      Soalan 7 : Penceramah mengalakkan peserta bertanya dan bertukar pendapat 
+   
+  </div>
+  <div class="item item-text-wrap">
+   <i class="icon ion-happy-outline kiri"> {{result71}}</i>
+    <i class="icon ion-happy tengahKiri"> {{result72}}</i>
+    <i class="icon ion-sad-outline tengahKanan"> {{result73}}</i>
+    <i class="icon ion-sad kanan"> {{result74}}</i>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-divider">
+   Soalan 8 : Alat bantuan mengajar digunakan sepenuhnya
+   
+  </div>
+  <div class="item item-text-wrap">
+  <i class="icon ion-happy-outline kiri"> {{result81}}</i>
+    <i class="icon ion-happy tengahKiri"> {{result82}}</i>
+    <i class="icon ion-sad-outline tengahKanan"> {{result83}}</i>
+    <i class="icon ion-sad kanan"> {{result84}}</i>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-divider">
+   Soalan 9 : Penceramah mengemukakan soalan/latihan/aktiviti untuk menguji kefahaman
+    
+  </div>
+  <div class="item item-text-wrap">
+  <i class="icon ion-happy-outline kiri"> {{result91}}</i>
+    <i class="icon ion-happy tengahKiri"> {{result92}}</i>
+    <i class="icon ion-sad-outline tengahKanan"> {{result93}}</i>
+    <i class="icon ion-sad kanan"> {{result94}}</i>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-divider">
+  Soalan 10 : Nilai kemahiran / pengetahuan sebelum kursus
+  
+  </div>
+  <div class="item item-text-wrap">
+   <i class="icon ion-happy-outline kiri"> {{result101}}</i>
+    <i class="icon ion-happy tengahKiri"> {{result102}}</i>
+    <i class="icon ion-sad-outline tengahKanan"> {{result103}}</i>
+    <i class="icon ion-sad kanan"> {{result104}}</i>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-divider">
+   Soalan 11 : Nilai kemahiran / pengetahuan selepas kursus
+   
+  </div>
+  <div class="item item-text-wrap">
+  <i class="icon ion-happy-outline kiri"> {{result111}}</i>
+    <i class="icon ion-happy tengahKiri"> {{result112}}</i>
+    <i class="icon ion-sad-outline tengahKanan"> {{result113}}</i>
+    <i class="icon ion-sad kanan"> {{result114}}</i>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-divider">
+   Soalan 12 : Kegunaan pengetahuan yang diperolehi dalam tugas jabatan
+  </div>
+  <div class="item item-text-wrap">
+  <i class="icon ion-happy-outline kiri"> {{result121}}</i>
+    <i class="icon ion-happy tengahKiri"> {{result122}}</i>
+    <i class="icon ion-sad-outline tengahKanan"> {{result123}}</i>
+    <i class="icon ion-sad kanan"> {{result124}}</i>
+  </div>
+</div>
+
+
+
+</ion-content>
+</ion-view>

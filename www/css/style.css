@@ -1,0 +1,155 @@
+/* Empty. Add your own CSS if you like */
+.slider {
+  height: 100vh;
+}
+
+
+.background{
+background-color: #1E90FF;
+}
+
+.titleBox1{
+	color: #FFFAF0;
+	text-align: center;
+}
+
+.textBox1{
+	color: #FFFAF0;
+	text-align: justify;
+	font-size: 17px;
+}
+
+.background1{
+	border-top:#1E90FF;
+	background-color: #1E90FF;
+}
+
+.width{
+	width:100px;
+	background-color: #00BFFF;
+	color: #FFFFFF;
+}
+
+.butang{
+	text-align: center;
+	float: center;
+}
+
+.button.ng-hide{
+  display:none;
+}
+
+
+.haha{
+	background-color: blue;
+}
+
+
+.boxsizingBorder {
+  
+    padding-left: 4px;
+    height: 150px;
+    background: transparent;
+    line-height: 18px;
+    // you should add the following:
+    box-sizing: border-box; 
+    width: 100%;
+
+}
+
+
+.hey .popup-body{
+      	background-color: #41BA47;
+      	color: #fcfcfc;
+
+}
+
+.hey .popup-head{
+	background-color: #41BA47;
+} 
+
+.hey .popup-buttons .button{
+	background-color: #02d613;
+	color: #fcfcfc;
+} 
+
+.hey .popup-title{
+	color: #fcfcfc;
+}
+
+.hey .popup-buttons{
+	background-color: #41BA47;
+}
+
+
+
+
+.marginsenget{
+	margin-top: -5px;
+	margin-left: -5px;
+}
+
+.kiri{
+	float: left;
+}
+
+.kanan{
+	float: right;
+}
+
+.tengahKiri{
+	margin-left: 20%;
+}
+
+.tengahKanan{
+	margin-left: 20%;
+	margin-right: 10%
+}
+
+.saizHuruf{
+	font-size: 16px;
+}
+
+
+
+.searchBar {
+	color: #fff;
+	margin: 0 !important;
+	padding: 0;
+}
+.searchBar .icon {
+	font-size: 27px;
+	line-height: 1.2;
+	padding-right: 6px;
+	padding-left: 6px;
+}
+.searchBar .searchTxt {
+	border-bottom: 1px solid #fff;
+	left: 55px;
+	width: calc(100% - 100px);
+	position: fixed;
+	height: calc(100% - 10px);
+}
+.searchBar.numicons2 .searchTxt {
+	width: calc(100% - 135px);
+}
+.searchBar .searchTxt > .bgdiv {
+	background-color: #aaa;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.3;
+}
+.searchBar .searchTxt > .bgtxt {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.searchBar .searchTxt input {
+	background-color: inherit;
+	color: #fff;
+	padding-left: 5px;
+	padding-right:5px;
+}

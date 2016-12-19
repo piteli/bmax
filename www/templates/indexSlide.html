@@ -1,0 +1,74 @@
+<ion-view class="background" view-title="Bmax" hide-back-button="true">
+
+<ion-nav-buttons side="left">
+          <button class="button button-light button-clear no-animation marginsenget"
+                  ng-click="startApp()" ng-show="!slideIndex">
+            Hiraukan
+          </button>
+          <button class="button icon-left ion-chevron-left button-light button-clear no-animation marginsenget"
+                  ng-click="previous()" ng-show="slideIndex > 0">
+            Kembali
+          </button>
+        </ion-nav-buttons>
+
+
+<ion-nav-buttons side="right"> 
+          <button class="button icon-right ion-chevron-right button-light button-clear no-animation"
+                  ng-click="next()" ng-show="slideIndex != 2">
+            Seterusnya
+          </button>
+          <button class="button button-light button-clear no-animation"
+                  ng-click="startApp()" ng-show="slideIndex == 2">
+         
+          </button>
+        </ion-nav-buttons>
+
+<ion-content>
+
+
+
+
+
+
+
+      <ion-slide-box on-slide-changed="slideChanged($index)">
+
+   <ion-slide class="background padding">
+      <div class = "box box1">
+
+      <center><img src="img/form.png"/></center>
+      
+         <h2 class="titleBox1 ">Selamat Datang ke Aplikasi Mudah Alih BMAX!</h2>
+
+      <p class="textBox1">
+      Aplikasi mudah alih ini adalah untuk peserta kursus bagi Penilaian Keberkesanan Latihan. Perkhidmatan ini menawarkan pengisian secara mudah alih. Klik seterusnya untuk panduan berikutnya. </p>
+      </div>
+
+   </ion-slide>
+
+   <ion-slide class="background padding">
+      <div class = "box box2">
+      <center><img src="img/bulb.png"/></center>
+
+         <h1 class="titleBox1">Perhatian!</h1>
+         <p class="textBox1">Permulaan anda perlu mengisi maklumat anda seperti nama penuh, no kakitangan, bahagian dan pusat pengajian. Anda juga dikehendaki membuat kaji selidik untuk memberi ulasan     tentang kualiti keberkesanan program yang dianjurkan. Sila klik butang MULA untuk mula menjawab.</p>
+      </div>
+   </ion-slide>
+
+   <ion-slide class="background padding">
+      <div class = "box box3">
+      <center><img src="img/check.png"/></center>
+         <h1 class="titleBox1">Jom Klik!</h1>
+         <p class="textBox1">Sila PILIH SATU daripada empat pilihan yang diberikan.</p>
+          <button class="button button-block button-large button-energized" ng-click="mula()">Klik untuk mula!</button>
+      <p class="titleBox1">Sekiranya anda adalah admin..klik di bawah</p>
+      <button class="button button-block button-small" ng-click="loginAdmin()">Klik untuk Admin</button>
+      <button class="button button-block button-small" ng-click="keTest()">testing</button>
+      
+      </div>
+   </ion-slide>
+
+</ion-slide-box>
+
+</ion-content>
+</ion-view>

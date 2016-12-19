@@ -1,0 +1,45 @@
+<ion-view  hide-nav-bar="true">
+
+<ion-header-bar class="bar bar-stable">
+<div class="buttons">
+        <button class="button button-icon icon ion-ios-minus-outline"
+          ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
+      </div>
+     <h1 class="title">Maklum balas peserta</h1>
+     <div class="button">
+     <search-bar ng-model="search" class="ion-search"></search-bar>
+     </div>
+ </ion-header-bar>
+
+<ion-content>
+
+<ion-list 
+          show-delete="data.showDelete"
+          show-reorder="data.showReorder"
+          can-swipe="listCanSwipe">
+  <ion-item ng-repeat="item in data"
+            class="item-thumbnail-right"
+            ui-sref="tab.data-detail({Id: '{{item.id}}',Nama: '{{item.nama}}'})">
+      <img ng-src="{{item.gambar}}">
+
+      <h2>{{item.nama}}</h2>
+      <p>peserta telah mengisi</p>
+      <p>{{item.mula}} hingga {{item.tamat}}</p>
+      <p>{{item.tempat}}</p>
+    </a>
+    <ion-delete-button class="ion-minus-circled" 
+                             ng-click="onItemDelete(item)">
+          </ion-delete-button>
+          <ion-option-button class="button-assertive"
+                             ng-click="edit(item)">
+            Edit
+          </ion-option-button>
+          <ion-option-button class="button-calm"
+                             ng-click="share(item)">
+            Share
+          </ion-option-button>
+      
+</ion-list>
+
+</ion-content>
+</ion-view>
