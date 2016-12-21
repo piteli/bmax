@@ -249,7 +249,19 @@ $scope.array = [];
 
 })
 
-.controller('DashCtrl', function($location,$scope,$state,$ionicPush){
+.controller('DashCtrl', function($location,$scope,$state,$ionicPush,$http){
+
+  var xhr = $http({
+      method: 'post',
+      url: 'http://192.168.0.105/bmax/getUsers.php'
+    });
+    xhr.success(function(data){
+     $scope.data = Object.values(data.result).length;
+
+
+    });
+
+
 
   $scope.$on('cloud:push:notification', function(event, data) {
   var msg = data.message;
@@ -273,7 +285,7 @@ $scope.array = [];
 
 })
 
-.controller('dataCtrl', function($location,$scope,$state,$http){
+.controller('dataCtrl', function($location,$scope,$state,$http,$ionicHistory){
 
 
   var xhr = $http({
@@ -284,6 +296,13 @@ $scope.array = [];
      $scope.data = data.result;
  //    $scope.$apply();
   //   Object.values(data.result).length;
+      if(Object.keys(data.result).length == 0){
+        $ionicHistory.nextViewOptions({
+        disableAnimate: true
+        });
+
+        $state.go('tab.data-background');
+      }
     });
 
     $scope.data = {
@@ -1288,6 +1307,8 @@ $scope.selectPicture = function(sourceType) {
     sourceType: sourceType,
     saveToPhotoAlbum: false,
     allowEdit : true,
+    targetWidth: 1000,
+    targetHeight: 1000
   };
  
   $cordovaCamera.getPicture(options).then(function(imagePath) {
@@ -1565,6 +1586,12 @@ $scope.uploadImage = function() {
 })
 
 .controller('resCtrl', function($location,$scope, $state, $http,$ionicHistory, $ionicPopup,$ionicLoading,$ionicSlideBoxDelegate,$ionicActionSheet,$cordovaCamera,$cordovaDevice,$cordovaFile,$cordovaFileTransfer,$ionicLoading) {
+
+ 
+  })
+
+
+.controller('bgCtrl', function($location,$scope, $state, $http,$ionicHistory, $ionicPopup,$ionicLoading,$ionicSlideBoxDelegate,$ionicActionSheet,$cordovaCamera,$cordovaDevice,$cordovaFile,$cordovaFileTransfer,$ionicLoading) {
 
  
   })
