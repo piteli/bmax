@@ -326,6 +326,15 @@ $scope.array = [];
       }
     });
 
+    var xhr2 = $http({
+      method: 'post',
+      url: 'http://192.168.0.105/bmax/getPeserta.php'
+    });
+    xhr2.success(function(data){
+          $scope.data2 = Object.keys(data.result).length;
+      });
+
+
     $scope.data = {
     showDelete: false
   };
