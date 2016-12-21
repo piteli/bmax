@@ -262,6 +262,27 @@ $scope.array = [];
     });
 
 
+    var xhr2 = $http({
+      method: 'post',
+      url: 'http://192.168.0.105/bmax/getForm.php'
+    });
+    xhr2.success(function(data){
+     $scope.data2 = Object.values(data.result).length;
+
+
+    });
+
+    var xhr3 = $http({
+      method: 'post',
+      url: 'http://192.168.0.105/bmax/getKursus.php'
+    });
+    xhr3.success(function(data){
+     $scope.data3 = Object.values(data.result).length;
+
+
+    });
+
+
 
   $scope.$on('cloud:push:notification', function(event, data) {
   var msg = data.message;
