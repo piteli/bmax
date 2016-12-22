@@ -128,6 +128,17 @@ angular.module('starter', ['ionic','ionic.cloud','controller','ngCordova'])
  }
  })
 
+ .state('tab.data-background', {
+ url: '/background',
+ cache: false,
+ views: {
+ 'tab-data': {
+ templateUrl: 'templates/background.html',
+ controller: 'bgCtrl'
+ }
+ }
+ })
+
   .state('tab.kursus', {
  url: '/kursus',
  views: {
