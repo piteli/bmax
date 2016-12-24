@@ -98,6 +98,7 @@ angular.module('starter', ['ionic','ionic.cloud','controller','ngCordova'])
 
   .state('tab.dash', {
  url: '/dash',
+ cache: false,
  views: {
  'tab-dash': {
  templateUrl: 'templates/tab-dash.html',
@@ -141,6 +142,7 @@ angular.module('starter', ['ionic','ionic.cloud','controller','ngCordova'])
 
   .state('tab.kursus', {
  url: '/kursus',
+ cache: false,
  views: {
  'tab-kursus': {
  templateUrl: 'templates/tab-kursus.html',
