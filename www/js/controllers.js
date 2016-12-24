@@ -256,7 +256,7 @@ $scope.array = [];
       url: 'http://192.168.0.105/bmax/getUsers.php'
     });
     xhr.success(function(data){
-     $scope.data = Object.values(data.result).length;
+     $scope.data = data.result.length;
 
 
     });
@@ -267,7 +267,7 @@ $scope.array = [];
       url: 'http://192.168.0.105/bmax/getForm.php'
     });
     xhr2.success(function(data){
-     $scope.data2 = Object.values(data.result).length;
+     $scope.data2 = data.result.length;
 
 
     });
@@ -277,7 +277,7 @@ $scope.array = [];
       url: 'http://192.168.0.105/bmax/getKursus.php'
     });
     xhr3.success(function(data){
-     $scope.data3 = Object.values(data.result).length;
+     $scope.data3 = data.result.length;
 
 
     });
@@ -314,10 +314,11 @@ $scope.array = [];
       url: 'http://192.168.0.105/bmax/getList.php'
     });
     xhr.success(function(data){
+
+      
      $scope.data = data.result;
- //    $scope.$apply();
-  //   Object.values(data.result).length;
-      if(Object.keys(data.result).length == 0){
+
+     if(data.result.length == 0){
         $ionicHistory.nextViewOptions({
         disableAnimate: true
         });
@@ -326,12 +327,16 @@ $scope.array = [];
       }
     });
 
+ //    $scope.$apply();
+  //   Object.values(data.result).length;
+      
+
     var xhr2 = $http({
       method: 'post',
       url: 'http://192.168.0.105/bmax/getPeserta.php'
     });
     xhr2.success(function(data){
-          $scope.data2 = Object.keys(data.result).length;
+          $scope.data2 = data.result.length;
       });
 
 
@@ -423,6 +428,8 @@ $scope.array = [];
     xhr11.success(function(data){
       $scope.data = data.result12;
 
+
+
   //    $scope.$apply();
 
    //   console.log(data.result12);
@@ -479,177 +486,177 @@ $scope.array = [];
    var sum124 = 0;
 
 
-   for(i=0; i<Object.values(data.result12).length; i++){
+   for(i=0; i<data.result12.length; i++){
    
-    if(Object.values(data.result12[i].q1) == '1'){
+    if(data.result12[i].q1 == '1'){
        
        sum11 = sum11 + 1;
        $scope.result11 = sum11;
 
     }
 
-    if(Object.values(data.result12[i].q1) == '2'){
+    if(data.result12[i].q1 == '2'){
        
        sum12 = sum12 + 1;
        $scope.result12 = sum12;
 
     }
 
-    if(Object.values(data.result12[i].q1) == '3'){
+    if(data.result12[i].q1 == '3'){
        
        sum13 = sum13 + 1;
        $scope.result13 = sum13;
 
     }
 
-    if(Object.values(data.result12[i].q1) == '4'){
+    if(data.result12[i].q1 == '4'){
        
        sum14 = sum14 + 1;
        $scope.result14 = sum14;
 
     }
 
-    if(Object.values(data.result12[i].q2) == '1'){
+    if(data.result12[i].q2 == '1'){
        
        sum21 = sum21 + 1;
        $scope.result21 = sum21;
 
     }
 
-    if(Object.values(data.result12[i].q2) == '2'){
+    if(data.result12[i].q2 == '2'){
        
        sum22 = sum22 + 1;
        $scope.result22 = sum22;
 
     }
 
-    if(Object.values(data.result12[i].q2) == '3'){
+    if(data.result12[i].q2 == '3'){
        
        sum23 = sum23 + 1;
        $scope.result23 = sum23;
 
     }
 
-    if(Object.values(data.result12[i].q2) == '4'){
+    if(data.result12[i].q2 == '4'){
        
        sum24 = sum24 + 1;
        $scope.result24 = sum24;
 
     }
 
-    if(Object.values(data.result12[i].q3) == '1'){
+    if(data.result12[i].q3 == '1'){
        
        sum31 = sum31 + 1;
        $scope.result31 = sum31;
 
     }
 
-    if(Object.values(data.result12[i].q3) == '2'){
+    if(data.result12[i].q3 == '2'){
        
        sum32 = sum32 + 1;
        $scope.result32 = sum32;
 
     }
 
-    if(Object.values(data.result12[i].q3) == '3'){
+    if(data.result12[i].q3 == '3'){
        
        sum33 = sum33 + 1;
        $scope.result33 = sum33;
 
     }
 
-    if(Object.values(data.result12[i].q3) == '4'){
+    if(data.result12[i].q3 == '4'){
        
        sum34 = sum34 + 1;
        $scope.result34 = sum34;
 
     }
 
-    if(Object.values(data.result12[i].q4) == '1'){
+    if(data.result12[i].q4 == '1'){
        
        sum41 = sum41 + 1;
        $scope.result41 = sum41;
 
     }
 
-    if(Object.values(data.result12[i].q4) == '2'){
+    if(data.result12[i].q4 == '2'){
        
        sum42 = sum42 + 1;
        $scope.result42 = sum42;
 
     }
 
-    if(Object.values(data.result12[i].q4) == '3'){
+    if(data.result12[i].q4 == '3'){
        
        sum43 = sum43 + 1;
        $scope.result43 = sum43;
 
     }
 
-    if(Object.values(data.result12[i].q4) == '4'){
+    if(data.result12[i].q4 == '4'){
        
        sum44 = sum44 + 1;
        $scope.result44 = sum44;
 
     }
 
-    if(Object.values(data.result12[i].q5) == '1'){
+    if(data.result12[i].q5 == '1'){
        
        sum51 = sum51 + 1;
        $scope.result51 = sum51;
 
     }
 
-    if(Object.values(data.result12[i].q5) == '2'){
+    if(data.result12[i].q5 == '2'){
        
        sum52 = sum52 + 1;
        $scope.result52 = sum52;
 
     }
 
-    if(Object.values(data.result12[i].q5) == '3'){
+    if(data.result12[i].q5 == '3'){
        
        sum53 = sum53 + 1;
        $scope.result53 = sum53;
 
     }
 
-    if(Object.values(data.result12[i].q5) == '4'){
+    if(data.result12[i].q5 == '4'){
        
        sum54 = sum54 + 1;
        $scope.result54 = sum54;
 
     }
 
-    if(Object.values(data.result12[i].q6) == '1'){
+    if(data.result12[i].q6 == '1'){
        
        sum61 = sum61 + 1;
        $scope.result61 = sum61;
 
     }
 
-    if(Object.values(data.result12[i].q6) == '2'){
+    if(data.result12[i].q6 == '2'){
        
        sum62 = sum62 + 1;
        $scope.result62 = sum62;
 
     }
 
-    if(Object.values(data.result12[i].q6) == '3'){
+    if(data.result12[i].q6 == '3'){
        
        sum63 = sum63 + 1;
        $scope.result63 = sum63;
 
     }
 
-    if(Object.values(data.result12[i].q6) == '4'){
+    if(data.result12[i].q6 == '4'){
        
        sum64 = sum64 + 1;
        $scope.result64 = sum64;
 
     }
 
-    if(Object.values(data.result12[i].q7) == '1'){
+    if(data.result12[i].q7 == '1'){
        
        sum71 = sum71 + 1;
        $scope.result71 = sum71;
@@ -657,42 +664,42 @@ $scope.array = [];
     }
 
 
-    if(Object.values(data.result12[i].q7) == '2'){
+    if(data.result12[i].q7 == '2'){
        
        sum72 = sum72 + 1;
        $scope.result72 = sum72;
 
     }
 
-    if(Object.values(data.result12[i].q7) == '3'){
+    if(data.result12[i].q7 == '3'){
        
        sum73 = sum73 + 1;
        $scope.result73 = sum73;
 
     }
 
-    if(Object.values(data.result12[i].q7) == '4'){
+    if(data.result12[i].q7 == '4'){
        
        sum74 = sum74 + 1;
        $scope.result74 = sum74;
 
     }
 
-    if(Object.values(data.result12[i].q8) == '1'){
+    if(data.result12[i].q8 == '1'){
        
        sum81 = sum81 + 1;
        $scope.result81 = sum81;
 
     }
 
-    if(Object.values(data.result12[i].q8) == '2'){
+    if(data.result12[i].q8 == '2'){
        
        sum82 = sum82 + 1;
        $scope.result82 = sum82;
 
     }
 
-    if(Object.values(data.result12[i].q8) == '3'){
+    if(data.result12[i].q8 == '3'){
        
        sum83 = sum83 + 1;
        $scope.result83 = sum83;
@@ -700,119 +707,119 @@ $scope.array = [];
     }
 
 
-    if(Object.values(data.result12[i].q8) == '4'){
+    if(data.result12[i].q8 == '4'){
        
        sum84 = sum84 + 1;
        $scope.result84 = sum84;
 
     }
 
-    if(Object.values(data.result12[i].q9) == '1'){
+    if(data.result12[i].q9 == '1'){
        
        sum91 = sum91 + 1;
        $scope.result91 = sum91;
 
     }
 
-    if(Object.values(data.result12[i].q9) == '2'){
+    if(data.result12[i].q9 == '2'){
        
        sum92 = sum92 + 1;
        $scope.result92 = sum92;
 
     }
 
-    if(Object.values(data.result12[i].q9) == '3'){
+    if(data.result12[i].q9 == '3'){
        
        sum93 = sum93 + 1;
        $scope.result93 = sum93;
 
     }
 
-    if(Object.values(data.result12[i].q9) == '4'){
+    if(data.result12[i].q9 == '4'){
        
        sum94 = sum94 + 1;
        $scope.result94 = sum94;
 
     }
 
-    if(Object.values(data.result12[i].q10) == '1'){
+    if(data.result12[i].q10 == '1'){
        
        sum101 = sum101 + 1;
        $scope.result101 = sum101;
 
     }
 
-    if(Object.values(data.result12[i].q10) == '2'){
+    if(data.result12[i].q10 == '2'){
        
        sum102 = sum102 + 1;
        $scope.result102 = sum102;
 
     }
 
-    if(Object.values(data.result12[i].q10) == '3'){
+    if(data.result12[i].q10 == '3'){
        
        sum103 = sum103 + 1;
        $scope.result103 = sum103;
 
     }
 
-    if(Object.values(data.result12[i].q10) == '4'){
+    if(data.result12[i].q10 == '4'){
        
        sum104 = sum104 + 1;
        $scope.result104 = sum104;
 
     }
 
-    if(Object.values(data.result12[i].q11) == '1'){
+    if(data.result12[i].q11 == '1'){
        
        sum111 = sum111 + 1;
        $scope.result111 = sum111;
 
     }
 
-    if(Object.values(data.result12[i].q11) == '2'){
+    if(data.result12[i].q11 == '2'){
        
        sum112 = sum112 + 1;
        $scope.result112 = sum112;
 
     }
 
-    if(Object.values(data.result12[i].q11) == '3'){
+    if(data.result12[i].q11 == '3'){
        
        sum113 = sum113 + 1;
        $scope.result113 = sum113;
 
     }
 
-    if(Object.values(data.result12[i].q11) == '4'){
+    if(data.result12[i].q11 == '4'){
        
        sum114 = sum114 + 1;
        $scope.result114 = sum114;
 
     }
 
-    if(Object.values(data.result12[i].q12) == '1'){
+    if(data.result12[i].q12 == '1'){
        
        sum121 = sum121 + 1;
        $scope.result121 = sum121;
 
     }
 
-    if(Object.values(data.result12[i].q12) == '2'){
+    if(data.result12[i].q12 == '2'){
        
        sum122 = sum122 + 1;
        $scope.result122 = sum122;
 
     }
 
-    if(Object.values(data.result12[i].q12) == '3'){
+    if(data.result12[i].q12 == '3'){
        
        sum123 = sum123 + 1;
        $scope.result123 = sum123;
 
     }
 
-    if(Object.values(data.result12[i].q12) == '4'){
+    if(data.result12[i].q12 == '4'){
        
        sum124 = sum124 + 1;
        $scope.result124 = sum124;
@@ -894,177 +901,177 @@ $scope.doRefresh = function() {
    var sum124 = 0;
 
 
-   for(i=0; i<Object.values(data.result12).length; i++){
+   for(i=0; i<data.result12.length; i++){
    
-    if(Object.values(data.result12[i].q1) == '1'){
+    if(data.result12[i].q1 == '1'){
        
        sum11 = sum11 + 1;
        $scope.result11 = sum11;
 
     }
 
-    if(Object.values(data.result12[i].q1) == '2'){
+    if(data.result12[i].q1 == '2'){
        
        sum12 = sum12 + 1;
        $scope.result12 = sum12;
 
     }
 
-    if(Object.values(data.result12[i].q1) == '3'){
+    if(data.result12[i].q1 == '3'){
        
        sum13 = sum13 + 1;
        $scope.result13 = sum13;
 
     }
 
-    if(Object.values(data.result12[i].q1) == '4'){
+    if(data.result12[i].q1 == '4'){
        
        sum14 = sum14 + 1;
        $scope.result14 = sum14;
 
     }
 
-    if(Object.values(data.result12[i].q2) == '1'){
+    if(data.result12[i].q2 == '1'){
        
        sum21 = sum21 + 1;
        $scope.result21 = sum21;
 
     }
 
-    if(Object.values(data.result12[i].q2) == '2'){
+    if(data.result12[i].q2 == '2'){
        
        sum22 = sum22 + 1;
        $scope.result22 = sum22;
 
     }
 
-    if(Object.values(data.result12[i].q2) == '3'){
+    if(data.result12[i].q2 == '3'){
        
        sum23 = sum23 + 1;
        $scope.result23 = sum23;
 
     }
 
-    if(Object.values(data.result12[i].q2) == '4'){
+    if(data.result12[i].q2 == '4'){
        
        sum24 = sum24 + 1;
        $scope.result24 = sum24;
 
     }
 
-    if(Object.values(data.result12[i].q3) == '1'){
+    if(data.result12[i].q3 == '1'){
        
        sum31 = sum31 + 1;
        $scope.result31 = sum31;
 
     }
 
-    if(Object.values(data.result12[i].q3) == '2'){
+    if(data.result12[i].q3 == '2'){
        
        sum32 = sum32 + 1;
        $scope.result32 = sum32;
 
     }
 
-    if(Object.values(data.result12[i].q3) == '3'){
+    if(data.result12[i].q3 == '3'){
        
        sum33 = sum33 + 1;
        $scope.result33 = sum33;
 
     }
 
-    if(Object.values(data.result12[i].q3) == '4'){
+    if(data.result12[i].q3 == '4'){
        
        sum34 = sum34 + 1;
        $scope.result34 = sum34;
 
     }
 
-    if(Object.values(data.result12[i].q4) == '1'){
+    if(data.result12[i].q4 == '1'){
        
        sum41 = sum41 + 1;
        $scope.result41 = sum41;
 
     }
 
-    if(Object.values(data.result12[i].q4) == '2'){
+    if(data.result12[i].q4 == '2'){
        
        sum42 = sum42 + 1;
        $scope.result42 = sum42;
 
     }
 
-    if(Object.values(data.result12[i].q4) == '3'){
+    if(data.result12[i].q4 == '3'){
        
        sum43 = sum43 + 1;
        $scope.result43 = sum43;
 
     }
 
-    if(Object.values(data.result12[i].q4) == '4'){
+    if(data.result12[i].q4 == '4'){
        
        sum44 = sum44 + 1;
        $scope.result44 = sum44;
 
     }
 
-    if(Object.values(data.result12[i].q5) == '1'){
+    if(data.result12[i].q5 == '1'){
        
        sum51 = sum51 + 1;
        $scope.result51 = sum51;
 
     }
 
-    if(Object.values(data.result12[i].q5) == '2'){
+    if(data.result12[i].q5 == '2'){
        
        sum52 = sum52 + 1;
        $scope.result52 = sum52;
 
     }
 
-    if(Object.values(data.result12[i].q5) == '3'){
+    if(data.result12[i].q5 == '3'){
        
        sum53 = sum53 + 1;
        $scope.result53 = sum53;
 
     }
 
-    if(Object.values(data.result12[i].q5) == '4'){
+    if(data.result12[i].q5 == '4'){
        
        sum54 = sum54 + 1;
        $scope.result54 = sum54;
 
     }
 
-    if(Object.values(data.result12[i].q6) == '1'){
+    if(data.result12[i].q6 == '1'){
        
        sum61 = sum61 + 1;
        $scope.result61 = sum61;
 
     }
 
-    if(Object.values(data.result12[i].q6) == '2'){
+    if(data.result12[i].q6 == '2'){
        
        sum62 = sum62 + 1;
        $scope.result62 = sum62;
 
     }
 
-    if(Object.values(data.result12[i].q6) == '3'){
+    if(data.result12[i].q6 == '3'){
        
        sum63 = sum63 + 1;
        $scope.result63 = sum63;
 
     }
 
-    if(Object.values(data.result12[i].q6) == '4'){
+    if(data.result12[i].q6 == '4'){
        
        sum64 = sum64 + 1;
        $scope.result64 = sum64;
 
     }
 
-    if(Object.values(data.result12[i].q7) == '1'){
+    if(data.result12[i].q7 == '1'){
        
        sum71 = sum71 + 1;
        $scope.result71 = sum71;
@@ -1072,42 +1079,42 @@ $scope.doRefresh = function() {
     }
 
 
-    if(Object.values(data.result12[i].q7) == '2'){
+    if(data.result12[i].q7 == '2'){
        
        sum72 = sum72 + 1;
        $scope.result72 = sum72;
 
     }
 
-    if(Object.values(data.result12[i].q7) == '3'){
+    if(data.result12[i].q7 == '3'){
        
        sum73 = sum73 + 1;
        $scope.result73 = sum73;
 
     }
 
-    if(Object.values(data.result12[i].q7) == '4'){
+    if(data.result12[i].q7 == '4'){
        
        sum74 = sum74 + 1;
        $scope.result74 = sum74;
 
     }
 
-    if(Object.values(data.result12[i].q8) == '1'){
+    if(data.result12[i].q8 == '1'){
        
        sum81 = sum81 + 1;
        $scope.result81 = sum81;
 
     }
 
-    if(Object.values(data.result12[i].q8) == '2'){
+    if(data.result12[i].q8 == '2'){
        
        sum82 = sum82 + 1;
        $scope.result82 = sum82;
 
     }
 
-    if(Object.values(data.result12[i].q8) == '3'){
+    if(data.result12[i].q8 == '3'){
        
        sum83 = sum83 + 1;
        $scope.result83 = sum83;
@@ -1115,119 +1122,119 @@ $scope.doRefresh = function() {
     }
 
 
-    if(Object.values(data.result12[i].q8) == '4'){
+    if(data.result12[i].q8 == '4'){
        
        sum84 = sum84 + 1;
        $scope.result84 = sum84;
 
     }
 
-    if(Object.values(data.result12[i].q9) == '1'){
+    if(data.result12[i].q9 == '1'){
        
        sum91 = sum91 + 1;
        $scope.result91 = sum91;
 
     }
 
-    if(Object.values(data.result12[i].q9) == '2'){
+    if(data.result12[i].q9 == '2'){
        
        sum92 = sum92 + 1;
        $scope.result92 = sum92;
 
     }
 
-    if(Object.values(data.result12[i].q9) == '3'){
+    if(data.result12[i].q9 == '3'){
        
        sum93 = sum93 + 1;
        $scope.result93 = sum93;
 
     }
 
-    if(Object.values(data.result12[i].q9) == '4'){
+    if(data.result12[i].q9 == '4'){
        
        sum94 = sum94 + 1;
        $scope.result94 = sum94;
 
     }
 
-    if(Object.values(data.result12[i].q10) == '1'){
+    if(data.result12[i].q10 == '1'){
        
        sum101 = sum101 + 1;
        $scope.result101 = sum101;
 
     }
 
-    if(Object.values(data.result12[i].q10) == '2'){
+    if(data.result12[i].q10 == '2'){
        
        sum102 = sum102 + 1;
        $scope.result102 = sum102;
 
     }
 
-    if(Object.values(data.result12[i].q10) == '3'){
+    if(data.result12[i].q10 == '3'){
        
        sum103 = sum103 + 1;
        $scope.result103 = sum103;
 
     }
 
-    if(Object.values(data.result12[i].q10) == '4'){
+    if(data.result12[i].q10 == '4'){
        
        sum104 = sum104 + 1;
        $scope.result104 = sum104;
 
     }
 
-    if(Object.values(data.result12[i].q11) == '1'){
+    if(data.result12[i].q11 == '1'){
        
        sum111 = sum111 + 1;
        $scope.result111 = sum111;
 
     }
 
-    if(Object.values(data.result12[i].q11) == '2'){
+    if(data.result12[i].q11 == '2'){
        
        sum112 = sum112 + 1;
        $scope.result112 = sum112;
 
     }
 
-    if(Object.values(data.result12[i].q11) == '3'){
+    if(data.result12[i].q11 == '3'){
        
        sum113 = sum113 + 1;
        $scope.result113 = sum113;
 
     }
 
-    if(Object.values(data.result12[i].q11) == '4'){
+    if(data.result12[i].q11 == '4'){
        
        sum114 = sum114 + 1;
        $scope.result114 = sum114;
 
     }
 
-    if(Object.values(data.result12[i].q12) == '1'){
+    if(data.result12[i].q12 == '1'){
        
        sum121 = sum121 + 1;
        $scope.result121 = sum121;
 
     }
 
-    if(Object.values(data.result12[i].q12) == '2'){
+    if(data.result12[i].q12 == '2'){
        
        sum122 = sum122 + 1;
        $scope.result122 = sum122;
 
     }
 
-    if(Object.values(data.result12[i].q12) == '3'){
+    if(data.result12[i].q12 == '3'){
        
        sum123 = sum123 + 1;
        $scope.result123 = sum123;
 
     }
 
-    if(Object.values(data.result12[i].q12) == '4'){
+    if(data.result12[i].q12 == '4'){
        
        sum124 = sum124 + 1;
        $scope.result124 = sum124;
