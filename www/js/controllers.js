@@ -25,7 +25,7 @@ angular.module('controller',['ionic.cloud'])
 				
 				//stores the data in the session. if the user is logged in, then there is no need to show login again.
 				
-				sessionStorage.setItem('loggedin_no', $scope.user_details.no);
+				sessionStorage.setItem('loggedin_role', $scope.user_details.role);
 			
 				
 				// remove the instance of login page, when user moves to profile page.
@@ -73,9 +73,9 @@ angular.module('controller',['ionic.cloud'])
 .controller('slideCtrl', function($scope, $state, $ionicSlideBoxDelegate,$location,$ionicHistory,$window) {
  
   // Called to navigate to the main app
-  sessionStorage.clear('loggedin_no');
+  sessionStorage.clear('loggedin_role');
 
-  console.log(sessionStorage.getItem('loggedin_no'));
+  console.log(sessionStorage.getItem('loggedin_role'));
 
   $scope.show = function() {
        $ionicLoading.show({
@@ -140,7 +140,7 @@ angular.module('controller',['ionic.cloud'])
 
 .controller('appCtrl', function($location,$scope, $state, $http,$ionicHistory, $ionicPopup,$ionicLoading,$ionicSlideBoxDelegate) {
 
-  console.log(sessionStorage.getItem('loggedin_no'));
+  console.log(sessionStorage.getItem('loggedin_role'));
 
 $scope.array = []; 
 
@@ -255,7 +255,7 @@ $scope.array = [];
 
 .controller('DashCtrl', function($location,$scope,$state,$ionicPush,$http,$cordovaToast,$ionicPopup){
 
-  if(sessionStorage.getItem('loggedin_no')){
+  if(sessionStorage.getItem('loggedin_role') == "R0leb4U"){
 
   var xhr = $http({
       method: 'post',
@@ -333,7 +333,7 @@ else {
 
 .controller('dataCtrl', function($location,$scope,$state,$http,$ionicHistory,$ionicPopup){
 
-if(sessionStorage.getItem('loggedin_no')){
+if(sessionStorage.getItem('loggedin_role') == "R0leb4U"){
   var xhr = $http({
       method: 'post',
       url: 'http://192.168.0.105/bmax/getList.php'
@@ -414,7 +414,7 @@ else{
 
 .controller('FriendDetailCtrl', function($location,$scope,$state,$stateParams,$http,$cordovaToast,$ionicPopup){
 
-  if(sessionStorage.getItem('loggedin_no')){
+  if(sessionStorage.getItem('loggedin_role') == "R0leb4U"){
 
  $scope.met = $stateParams.Nama;
  $scope.result11 = ' -';
@@ -1338,7 +1338,7 @@ $scope.doRefresh = function() {
 
 .controller('kursusCtrl', function($location,$scope, $state, $http,$ionicHistory, $ionicPopup,$ionicLoading,$ionicSlideBoxDelegate,$filter,$ionicActionSheet,$cordovaCamera,$cordovaDevice,$cordovaFile,$cordovaFileTransfer) {
 
-  if(sessionStorage.getItem('loggedin_no')){
+  if(sessionStorage.getItem('loggedin_role') == "R0leb4U"){
 
   $scope.array = []; 
   $scope.image = null;
