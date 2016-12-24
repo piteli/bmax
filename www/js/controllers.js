@@ -70,10 +70,12 @@ angular.module('controller',['ionic.cloud'])
 })
 
 
-.controller('slideCtrl', function($scope, $state, $ionicSlideBoxDelegate,$location) {
+.controller('slideCtrl', function($scope, $state, $ionicSlideBoxDelegate,$location,$ionicHistory,$window) {
  
   // Called to navigate to the main app
+  sessionStorage.clear('loggedin_no');
 
+  console.log(sessionStorage.getItem('loggedin_no'));
 
   $scope.show = function() {
        $ionicLoading.show({
@@ -137,6 +139,8 @@ angular.module('controller',['ionic.cloud'])
 	})
 
 .controller('appCtrl', function($location,$scope, $state, $http,$ionicHistory, $ionicPopup,$ionicLoading,$ionicSlideBoxDelegate) {
+
+  console.log(sessionStorage.getItem('loggedin_no'));
 
 $scope.array = []; 
 
@@ -249,7 +253,9 @@ $scope.array = [];
 
 })
 
-.controller('DashCtrl', function($location,$scope,$state,$ionicPush,$http){
+.controller('DashCtrl', function($location,$scope,$state,$ionicPush,$http,$cordovaToast,$ionicPopup){
+
+  if(sessionStorage.getItem('loggedin_no')){
 
   var xhr = $http({
       method: 'post',
@@ -304,11 +310,30 @@ $scope.array = [];
 
   };
 
+}
+
+else {
+      $state.go('login');
+      var alertPopup = $ionicPopup.alert({
+            title: 'Unauthorized Access',
+            template: '<center>Please Login first</center>',
+            buttons: [
+      {
+        text: '<b>ok</b>',
+        type: 'button-positive',
+        onTap: function(e) {
+         
+        }
+      }
+    ]
+          });
+}
+
 })
 
-.controller('dataCtrl', function($location,$scope,$state,$http,$ionicHistory){
+.controller('dataCtrl', function($location,$scope,$state,$http,$ionicHistory,$ionicPopup){
 
-
+if(sessionStorage.getItem('loggedin_no')){
   var xhr = $http({
       method: 'post',
       url: 'http://192.168.0.105/bmax/getList.php'
@@ -327,18 +352,19 @@ $scope.array = [];
       }
     });
 
+
  //    $scope.$apply();
   //   Object.values(data.result).length;
       
 
-    var xhr2 = $http({
+  /*  var xhr2 = $http({
       method: 'post',
       url: 'http://192.168.0.105/bmax/getPeserta.php'
     });
     xhr2.success(function(data){
           $scope.data2 = data.result.length;
       });
-
+                                            */
 
     $scope.data = {
     showDelete: false
@@ -365,10 +391,30 @@ $scope.array = [];
   $scope.patahBalik = function(){
     $state.go('slide');
   };
+}
+
+else{
+    $state.go('login');
+      var alertPopup = $ionicPopup.alert({
+            title: 'Unauthorized Access',
+            template: '<center>Please Login first</center>',
+            buttons: [
+      {
+        text: '<b>ok</b>',
+        type: 'button-positive',
+        onTap: function(e) {
+         
+        }
+      }
+    ]
+          });
+}
 
 })
 
-.controller('FriendDetailCtrl', function($location,$scope,$state,$stateParams,$http,$cordovaToast){
+.controller('FriendDetailCtrl', function($location,$scope,$state,$stateParams,$http,$cordovaToast,$ionicPopup){
+
+  if(sessionStorage.getItem('loggedin_no')){
 
  $scope.met = $stateParams.Nama;
  $scope.result11 = ' -';
@@ -1268,9 +1314,31 @@ $scope.doRefresh = function() {
   $scope.patahBalik = function(){
     $state.go('slide'); }
 
+
+  }
+
+  else{
+        $state.go('login');
+      var alertPopup = $ionicPopup.alert({
+            title: 'Unauthorized Access',
+            template: '<center>Please Login first</center>',
+            buttons: [
+      {
+        text: '<b>ok</b>',
+        type: 'button-positive',
+        onTap: function(e) {
+         
+        }
+      }
+    ]
+          });
+  }
+
 })
 
 .controller('kursusCtrl', function($location,$scope, $state, $http,$ionicHistory, $ionicPopup,$ionicLoading,$ionicSlideBoxDelegate,$filter,$ionicActionSheet,$cordovaCamera,$cordovaDevice,$cordovaFile,$cordovaFileTransfer) {
+
+  if(sessionStorage.getItem('loggedin_no')){
 
   $scope.array = []; 
   $scope.image = null;
@@ -1476,6 +1544,25 @@ $scope.pathForImage = function(image) {
       
 
     }
+
+  }
+
+  else{
+        $state.go('login');
+      var alertPopup = $ionicPopup.alert({
+            title: 'Unauthorized Access',
+            template: '<center>Please Login first</center>',
+            buttons: [
+      {
+        text: '<b>ok</b>',
+        type: 'button-positive',
+        onTap: function(e) {
+         
+        }
+      }
+    ]
+          });
+  }
   
   })
 
