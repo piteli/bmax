@@ -90,20 +90,28 @@ background-color: #1E90FF;
 }
 
 .kiri{
-	float: left;
+	font-size: 25px;
+	width:100px;
 }
 
 .kanan{
-	float: right;
+	margin-left: 10px;
+	font-size: 25px;
+	width:100px;
+
 }
 
 .tengahKiri{
-	margin-left: 20%;
+
+    margin-left: 10px;
+    font-size: 25px;
+    width:50px;
 }
 
 .tengahKanan{
-	margin-left: 20%;
-	margin-right: 10%
+	margin-left: 10px;
+    font-size: 25px;
+    width:50px;
 }
 
 .saizHuruf{
