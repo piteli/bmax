@@ -53,4 +53,4 @@ If you looking for the demo:
 
 ### Meta
 Fitri San - rushwender@gmail.com
-https://github.com/piteli/bmax.git
+My github : https://github.com/piteli/bmax.git
