@@ -9,6 +9,10 @@ angular.module('controller',['ionic.cloud'])
    		 });
  		 };
 
+     $scope.bmax = function() {
+    $state.go('slide');
+  };
+
   $scope.hide = function(){
         $ionicLoading.hide();
  		 };
@@ -1717,5 +1721,28 @@ $scope.uploadImage = function() {
 
 .controller('bgCtrl', function($location,$scope, $state, $http,$ionicHistory, $ionicPopup,$ionicLoading,$ionicSlideBoxDelegate,$ionicActionSheet,$cordovaCamera,$cordovaDevice,$cordovaFile,$cordovaFileTransfer,$ionicLoading) {
 
- 
+  if(sessionStorage.getItem('loggedin_role') == "R0leb4U"){
+
+    $scope.patahBalik = function(){
+    $state.go('slide');
+  }
+  }
+
+  else{
+      $state.go('login');
+      var alertPopup = $ionicPopup.alert({
+            title: 'Unauthorized Access',
+            template: '<center>Please Login first</center>',
+            buttons: [
+      {
+        text: '<b>ok</b>',
+        type: 'button-positive',
+        onTap: function(e) {
+         
+        }
+      }
+    ]
+          });
+  }
+
   })
