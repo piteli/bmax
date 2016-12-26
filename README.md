@@ -1,5 +1,7 @@
 # Ionic php/mysql evaluation app
 
+##bmax V0.2
+
 ##### What is bmax?
 
 Is a mobile cross platform application that provides evaluation to partipants to give feedback for those involves any workshop provided In Technology Mara's University using Angular/Ionic Framework. The purpose is to improve its effectiveness, and determine the quality to workshop recommended. There's two users involve this:-
