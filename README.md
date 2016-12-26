@@ -11,6 +11,7 @@ Is a mobile cross platform application that provides evaluation to partipants to
 * **Participants/guest** --> Attend the programs/workshops and give answers/feedback after workshops complete.
 
 
+
 ### Installation
 For Windows/Mac OSX/Linux:
 
@@ -26,7 +27,8 @@ Finally, run the app:
     $ionic serve
 
 
-##### App Demo
+
+### App Demo
 If you looking for the demo:
 
     Use Ionic View to see the demo of the app: http://view.ionic.io/ 
@@ -34,6 +36,8 @@ If you looking for the demo:
     If login page prompt:-
         Id: 123123
         password: pass
+
+
 
 ### Release History
 * V0.2
