@@ -32,7 +32,7 @@ If you looking for the demo:
     Use Ionic View to see the demo of the app: http://view.ionic.io/ 
     View Id: bb3aac59
     If login page prompt:-
-        Id: 12345
+        Id: 123123
         password: pass
 
 ### Release History
