@@ -19,7 +19,7 @@ angular.module('controller',['ionic.cloud'])
 		
 		$scope.login = function() {
 			$scope.show($ionicLoading);
-			var str="http://192.168.0.105/bmax/login.php?e="+$scope.user.no+"&p="+$scope.user.password;
+			var str="http://bmax.000webhostapp.com/login.php?e="+$scope.user.no+"&p="+$scope.user.password;
 			$http.get(str)
 			.success(function (response){   // if login request is Accepted
 				
@@ -160,7 +160,7 @@ $scope.array = [];
 
     var xhr = $http({
       method: 'post',
-      url: 'http://192.168.0.105/bmax/getKursus.php'
+      url: 'http://bmax.000webhostapp.com/getKursus.php'
     });
     xhr.success(function(data){
      $scope.data = data.result;
@@ -204,7 +204,7 @@ $scope.array = [];
 
     $scope.show($ionicLoading);
       
-      var link = 'http://192.168.0.105/bmax/saveForm.php?';
+      var link = 'http://bmax.000webhostapp.com/saveForm.php?';
       $http.get(link+"name="+data.name+"&no="+data.no+"&select="+data.select+"&q1="+data.choiceq1+"&q2="+data.choiceq2+"&q3="+data.choiceq3+"&q4="+data.choiceq4+"&q5="+data.choiceq5+"&q6="+data.choiceq6+"&q7="+data.choiceq7+"&q8="+data.choiceq8+"&q9="+data.choiceq9+"&q10="+data.choiceq10+"&q11="+data.choiceq11+"&q12="+data.choiceq12+"&qc="+data.qcadangan)
       .success(function (res){
 
@@ -263,7 +263,7 @@ $scope.array = [];
 
   var xhr = $http({
       method: 'post',
-      url: 'http://192.168.0.105/bmax/getUsers.php'
+      url: 'http://bmax.000webhostapp.com/getUsers.php'
     });
     xhr.success(function(data){
      $scope.data = data.result.length;
@@ -274,7 +274,7 @@ $scope.array = [];
 
     var xhr2 = $http({
       method: 'post',
-      url: 'http://192.168.0.105/bmax/getForm.php'
+      url: 'http://bmax.000webhostapp.com/getForm.php'
     });
     xhr2.success(function(data){
      $scope.data2 = data.result.length;
@@ -284,7 +284,7 @@ $scope.array = [];
 
     var xhr3 = $http({
       method: 'post',
-      url: 'http://192.168.0.105/bmax/getKursus.php'
+      url: 'http://bmax.000webhostapp.com/getKursus.php'
     });
     xhr3.success(function(data){
      $scope.data3 = data.result.length;
@@ -340,7 +340,7 @@ else {
 if(sessionStorage.getItem('loggedin_role') == "R0leb4U"){
   var xhr = $http({
       method: 'post',
-      url: 'http://192.168.0.105/bmax/getList.php'
+      url: 'http://bmax.000webhostapp.com/getList.php'
     });
     xhr.success(function(data){
 
@@ -384,7 +384,7 @@ if(sessionStorage.getItem('loggedin_role') == "R0leb4U"){
   $scope.onItemDelete = function(item) {
     $scope.data.splice($scope.data.indexOf(item), 1);
 
-    var link = 'http://192.168.0.105/bmax/delete.php?';
+    var link = 'http://bmax.000webhostapp.com/delete.php?';
     $http.get(link+'id='+item.id)
       .then(function (res){
 
@@ -473,7 +473,7 @@ else{
 
  var xhr11 = $http({
       method: 'get',
-      url: 'http://192.168.0.105/bmax/getDetails.php?id='+$stateParams.Id
+      url: 'http://bmax.000webhostapp.com/getDetails.php?id='+$stateParams.Id
     });
     xhr11.success(function(data){
       $scope.data = data.result12;
@@ -892,7 +892,7 @@ else{
 $scope.doRefresh = function() {
     var xhr11 = $http({
       method: 'get',
-      url: 'http://192.168.0.105/bmax/getDetails.php?id='+$stateParams.Id
+      url: 'http://bmax.000webhostapp.com/getDetails.php?id='+$stateParams.Id
     });
     xhr11.success(function(data){
       $scope.data = data.result12;
@@ -1481,7 +1481,7 @@ $scope.pathForImage = function(image) {
       
       var mulaDate = $filter('date')(kursus.mula, "yyyy/MM/dd");
       var tamatDate = $filter('date')(kursus.tamat, "yyyy/MM/dd");
-      var link = 'http://192.168.0.105/bmax/saveKursus.php?';
+      var link = 'http://bmax.000webhostapp.com/saveKursus.php?';
       $http.get(link+"nama="+kursus.nama+"&mula="+mulaDate+"&tamat="+tamatDate+"&tempat="+kursus.tempat)
       .success(function (res){
 
@@ -1505,7 +1505,7 @@ $scope.pathForImage = function(image) {
 
      }).finally(function($ionicLoading) { 
       // On both cases hide the loading
-       var url = "http://192.168.0.105/bmax/upload.php?hey="+hey;
+       var url = "http://bmax.000webhostapp.com/upload.php?hey="+hey;
  
   // File for Upload
   var targetPath = $scope.pathForImage($scope.image);
@@ -1688,7 +1688,7 @@ $scope.pathForImage = function(image) {
 $scope.uploadImage = function() {
   // Destination URL
   $scope.show($ionicLoading);
-  var url = "http://192.168.0.105/bmax/upload.php";
+  var url = "http://bmax.000webhostapp.com/upload.php";
  
   // File for Upload
   var targetPath = $scope.pathForImage($scope.image);
