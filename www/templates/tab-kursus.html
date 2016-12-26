@@ -1,32 +1,32 @@
 <ion-view hide-nav-bar="true">
 
 <ion-header-bar class="bar bar-stable">
-     <h1 class="title">Tambah Kursus</h1>
+     <h1 class="title">Add Course</h1>
      <button class="button icon ion-home pull-right" ng-click="patahBalik()"></button>
  </ion-header-bar>
 
 <ion-content class="padding">
 <div class="card">
   <div class="item item-divider">
-  Maklumat kursus yang dianjurkan
+  Course information
   </div>
   <div class="item item-text-wrap">
   <form name="wee">
     <div class="list">
   <label class="item item-input">
-    <span class="input-label">Nama kursus</span>
+    <span class="input-label">Course name</span>
     <input type="text" ng-model="kursus.nama" required>
   </label>
   <label class="item item-input">
-    <span class="input-label">Tarikh dianjurkan (Mula)</span>
+    <span class="input-label">Date organized (Before)</span>
     <input type="date" ng-model="kursus.mula" required>
   </label>
   <label class="item item-input">
-    <span class="input-label">Tarikh dianjurkan (Tamat)</span>
+    <span class="input-label">Date organized (After)</span>
     <input type="date" ng-model="kursus.tamat" required>
   </label>
   <label class="item item-input">
-    <span class="input-label">Tempat dianjurkan</span>
+    <span class="input-label">Location organized</span>
     <input type="text" ng-model="kursus.tempat" required>
   </label>
   <label>
@@ -38,6 +38,6 @@
   </div>
 
   <button class="button button-block button-calm" ng-click="hantarKursus(kursus); hantarKursus2(kursus);" ng-disabled="wee.$invalid"><ion-icon name="create"></ion-icon>
-   Simpan</button></form>
+   Submit</button></form>
 </ion-content>
 </ion-view>

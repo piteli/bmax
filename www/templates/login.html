@@ -1,4 +1,11 @@
-<ion-view view-title="Log Masuk">
+<ion-view view-title="Penilaian" hide-nav-bar="true" >
+
+<ion-header-bar class="bar bar-royal">
+<button class="button icon-left ion-chevron-left button-clear" ng-click="bmax()">Bmax</button>
+     <h1 class="title">Login</h1>
+     
+ </ion-header-bar>
+
       <ion-content class="padding">
 <center>
   <left><img src="img/uitm.png"/></left>
@@ -8,18 +15,18 @@
 <div class="card">
    <label class="item item-input item-stacked-label">
    <span class="input-label"> <i class="icon ion-person"></i></span>
-   <input ng-model="user.no" type="number" placeholder="Id Admin">
+   <input ng-model="user.no" type="number" placeholder="Admin Id">
    </label>
 
    <label class="item item-input item-stacked-label">
    <span class="input-label"><i class="icon ion-locked"></i></span>
-   <input ng-model="user.password" type="password" placeholder="Kata Laluan">
+   <input ng-model="user.password" type="password" placeholder="Password">
    </label>
 
 </div>
 <div align="right">
    <button class="button button-block button-positive" ng-click="login()">
-   Log masuk
+   Login
 </button>
 
 </div>

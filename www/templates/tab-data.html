@@ -5,7 +5,7 @@
         <button class="button button-icon icon ion-ios-minus-outline"
           ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
       </div>
-     <h1 class="title">Maklum balas peserta</h1>
+     <h1 class="title">Courses list</h1>
      <div class="button">
      <search-bar ng-model="search" class="ion-search"></search-bar>
      </div>
@@ -23,8 +23,8 @@
       <img ng-src="{{item.gambar}}">
 
       <h2>{{item.nama}}</h2>
-      <p>{{data2}} pengguna telah mengisi</p>
-      <p>{{item.mula}} hingga {{item.tamat}}</p>
+      <p>{{data2}} participants evaluated</p>
+      <p>{{item.mula}} until {{item.tamat}}</p>
       <p>{{item.tempat}}</p>
     </a>
     <ion-delete-button class="ion-minus-circled" 

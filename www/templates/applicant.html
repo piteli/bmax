@@ -2,7 +2,7 @@
 
 <ion-header-bar class="bar bar-royal">
 <button class="button icon-left ion-chevron-left button-clear" ng-click="bmax()">Bmax</button>
-     <h1 class="title">Penilaian</h1>
+     <h1 class="title">Evaluation</h1>
      
  </ion-header-bar>
 
@@ -11,8 +11,8 @@
                   ng-click="startApp()" ng-show="!slideIndex">
             
           </button>
-<button class="button icon-left ion-chevron-left button-light button-clear no-animation" ng-click="sebelumnya()" ng-show="slideIndex > 0">Kembali</button>
-<button class="button icon-right ion-chevron-right button-light button-clear no-animation pull-right" ng-click="seterusnya()" ng-show="slideIndex != 13">Seterusnya</button>
+<button class="button icon-left ion-chevron-left button-light button-clear no-animation" ng-click="sebelumnya()" ng-show="slideIndex > 0">Back</button>
+<button class="button icon-right ion-chevron-right button-light button-clear no-animation pull-right" ng-click="seterusnya()" ng-show="slideIndex != 13">Next</button>
 <button class="button  button-light button-clear no-animation" ng-click="seterusnya()" ng-show="slideIndex == 13"></button>
 
 
@@ -26,26 +26,26 @@
       <div class = "box box0">
       <div class="card">
       <div class="item item-divider item-text-wrap">
-      <h1><center>Maklumat Diri</center></h1>
+      <h1><center>User's information</center></h1>
       <br/>
-      <center>Sila isi maklumat anda</center>
+      <center>Fill your name</center>
       </div>
  <label></label> 
 <div class="list">
   <label class="item item-input item-floating-label">
-    <span class="input-label">Nama Staff</span>
-    <input type="text" placeholder="Nama Staff" ng-model="data.name" required>
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="Participant Name" ng-model="data.name" required>
   </label>
   <label class="item item-input item-floating-label">
-    <span class="input-label">No. Kakitangan</span>
-    <input type="number" placeholder="No. Kakitangan" ng-model="data.no" required>
+    <span class="input-label">Participant Id</span>
+    <input type="number" placeholder="Participant Id" ng-model="data.no" required>
   </label>
 
 
 
   <label class="item item-input item-select">
     <div class="input-label">
-      Pilih kursus
+      Choose
     </div>
     <select ng-model="data.select" required>
       <option ng-repeat="item in data" value="{{item.id}}">{{item.nama+"&nbsp, mula: "+item.mula+"&nbsp, tamat: "+item.tamat+"&nbsp, tempat: "+item.tempat}}</option>
@@ -67,18 +67,17 @@
       <div class="card">
        <div class="item item-divider item-text-wrap">
        
-       <h1><i class="icon ion-chatbubble"></i> Soalan 1</h1>
+       <h1><i class="icon ion-chatbubble"></i> Question 1</h1>
        <br>
-      1. Objektif kursus & pengetahuan 
-      yang bakal diperolehi dinyatakan dengan dengan jelas
+      1. The objective of the course and knowledge that would be obtained with clearly stated
    </div>
    
 
 <div class="item item-text-wrap">
-<ion-radio name="q1" ng-model="data.choiceq1" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Sangat Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq1" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq1" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Memuaskan</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq1" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Kurang memuaskan</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq1" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Very Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq1" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq1" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Satisfy</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq1" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Less Satisfy</ion-radio>
 </div>
 
    </div>
@@ -94,18 +93,18 @@
       <div class="card">
        <div class="item item-divider item-text-wrap">
        
-       <h1><i class="icon ion-chatbubble"></i> Soalan 2</h1>
+       <h1><i class="icon ion-chatbubble"></i> Question 2</h1>
        <br>
 
 
-        2. Kandungan kursus tersusun dan mudah difahami</div>
+        2. Course contents organized and easy to understand</div>
    
 
 <div class="item item-text-wrap">
-<ion-radio name="q1" ng-model="data.choiceq2" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Sangat Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq2" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq2" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Memuaskan</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq2" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Kurang memuaskan</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq2" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Very Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq2" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq2" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Satisfy</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq2" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Less Satisfy</ion-radio>
 </div>
 
    </div>
@@ -119,15 +118,15 @@
       <p>
       <div class="card">
        <div class="item item-divider item-text-wrap">
-       <h1><i class="icon ion-chatbubble"></i> Soalan 3</h1>
+       <h1><i class="icon ion-chatbubble"></i> Question 3</h1>
        <br>
-         3. Pengurusan kursus
+         3. Courses management
       </div>
 <div class="item item-text-wrap">
-<ion-radio name="q1" ng-model="data.choiceq3" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Sangat Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq3" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq3" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Memuaskan</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq3" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Kurang memuaskan</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq3" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Very Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq3" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq3" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Satisfy</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq3" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Less Satisfy</ion-radio>
 </div>
 
    </div>
@@ -142,15 +141,15 @@
       <p>
       <div class="card">
        <div class="item item-divider item-text-wrap">
-       <h1><i class="icon ion-chatbubble"></i> Soalan 4</h1>
+       <h1><i class="icon ion-chatbubble"></i> Question 4</h1>
        <br>
-         4. Lokasi kursus
+         4. Courses Location
           </div>
 <div class="item item-text-wrap">
-<ion-radio name="q1" ng-model="data.choiceq4" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Sangat Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq4" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq4" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Memuaskan</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq4" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Kurang memuaskan</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq4" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Very Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq4" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq4" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Satisfy</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq4" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Less Satisfy</ion-radio>
 </div>
  
    </div>
@@ -165,15 +164,15 @@
          <p>
       <div class="card">
        <div class="item item-divider item-text-wrap">
-       <h1><i class="icon ion-chatbubble"></i> Soalan 5</h1>
+       <h1><i class="icon ion-chatbubble"></i> Question 5</h1>
        <br>
-        5. Penyampaian penceramah sesuai dengan penerimaan peserta
+        5. Presentation of speakers in accordance with the reception of participants
          </div>
 <div class="item item-text-wrap">
-<ion-radio name="q1" ng-model="data.choiceq5" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Sangat Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq5" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq5" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Memuaskan</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq5" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Kurang memuaskan</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq5" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Very Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq5" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq5" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Satisfy</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq5" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Less Satisfy</ion-radio>
 </div>
 
    </div>
@@ -190,15 +189,15 @@
         <p>
       <div class="card">
        <div class="item item-divider item-text-wrap">
-       <h1><i class="icon ion-chatbubble"></i> Soalan 6</h1>
+       <h1><i class="icon ion-chatbubble"></i> Question 6</h1>
        <br>
-         6. Penceramah mempunyai pengetahuan/kemahiran yang luas tentang topik yang diajar
+         6. The speaker has a knowledge / skills taught extensively about topics
           </div>
 <div class="item item-text-wrap">
-<ion-radio name="q1" ng-model="data.choiceq6" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Sangat Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq6" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq6" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Memuaskan</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq6" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Kurang memuaskan</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq6" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Very Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq6" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq6" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Satisfy</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq6" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Less Satisfy</ion-radio>
 </div>
 
    </div>
@@ -214,15 +213,15 @@
          <p>
       <div class="card">
        <div class="item item-divider item-text-wrap">
-       <h1><i class="icon ion-chatbubble"></i> Soalan 7</h1>
+       <h1><i class="icon ion-chatbubble"></i> Question 7</h1>
        <br>
-         7. Penceramah mengalakkan peserta bertanya dan bertukar pendapat 
+         7. Speakers encouraged participants to ask questions and exchange ideas 
           </div>
 <div class="item item-text-wrap">
-<ion-radio name="q1" ng-model="data.choiceq7" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Sangat Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq7" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq7" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Memuaskan</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq7" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Kurang memuaskan</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq7" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Very Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq7" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq7" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Satisfy</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq7" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Less Satisfy</ion-radio>
 </div>
 
    </div>
@@ -235,15 +234,15 @@
         <p>
       <div class="card">
        <div class="item item-divider item-text-wrap">
-       <h1><i class="icon ion-chatbubble"></i> Soalan 8</h1>
+       <h1><i class="icon ion-chatbubble"></i> Question 8</h1>
        <br>
-        8. Alat bantuan mengajar digunakan sepenuhnya
+        8. Teaching aids used in fully
          </div>
 <div class="item item-text-wrap">
-<ion-radio name="q1" ng-model="data.choiceq8" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Sangat Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq8" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq8" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Memuaskan</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq8" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Kurang memuaskan</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq8" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Very Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq8" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq8" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Satisfy</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq8" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Less Satisfy</ion-radio>
 </div>
 
    </div>
@@ -257,15 +256,15 @@
         <p>
       <div class="card">
        <div class="item item-divider item-text-wrap">
-       <h1><i class="icon ion-chatbubble"></i> Soalan 9</h1>
+       <h1><i class="icon ion-chatbubble"></i> Question 9</h1>
        <br>
-         9. Penceramah mengemukakan soalan/latihan/aktiviti untuk menguji kefahaman
+         9. Speakers questions / exercises / activities to test comprehension
         </div>
 <div class="item item-text-wrap">
-<ion-radio name="q1" ng-model="data.choiceq9" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Sangat Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq9" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq9" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Memuaskan</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq9" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Kurang memuaskan</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq9" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Very Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq9" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq9" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Satisfy</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq9" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Less Satisfy</ion-radio>
 </div>
 
    </div>
@@ -279,15 +278,15 @@
          <p>
       <div class="card">
        <div class="item item-divider item-text-wrap">
-       <h1><i class="icon ion-chatbubble"></i> Soalan 10</h1>
+       <h1><i class="icon ion-chatbubble"></i> Question 10</h1>
        <br>
-        10. Nilai kemahiran / pengetahuan sebelum kursus
+        10. The skills / knowledge before the course begin
           </div>
 <div class="item item-text-wrap">
-<ion-radio name="q1" ng-model="data.choiceq10" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Sangat Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq10" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq10" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Memuaskan</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq10" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Kurang memuaskan</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq10" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Very Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq10" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq10" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Satisfy</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq10" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Less Satisfy</ion-radio>
 </div>
  
    </div>
@@ -302,15 +301,15 @@
          <p>
       <div class="card">
        <div class="item item-divider item-text-wrap">
-       <h1><i class="icon ion-chatbubble"></i> Soalan 11</h1>
+       <h1><i class="icon ion-chatbubble"></i> Question 11</h1>
        <br>
-        11. Nilai kemahiran / pengetahuan selepas kursus
+        11. The skills / knowledge after the course
          </div>
 <div class="item item-text-wrap">
-<ion-radio name="q1" ng-model="data.choiceq11" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Sangat Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq11" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq11" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Memuaskan</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq11" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Kurang memuaskan</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq11" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Very Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq11" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq11" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Satisfy</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq11" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Less Satisfy</ion-radio>
 </div>
 
    </div>
@@ -327,13 +326,13 @@
        <div class="item item-divider item-text-wrap">
        <h1><i class="icon ion-chatbubble"></i> Soalan 12</h1>
        <br>
-         12. Kegunaan pengetahuan yang diperolehi dalam tugas jabatan
+         12. Use the knowledge gained in the project department
            </div>
 <div class="item item-text-wrap">
-<ion-radio name="q1" ng-model="data.choiceq12" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Sangat Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq12" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Baik</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq12" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Memuaskan</ion-radio>
-<ion-radio name="q1" ng-model="data.choiceq12" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Kurang memuaskan</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq12" ng-value="'4'" required> <img src="IcoMoon-Free-master/PNG/32px/224-happy.png"> Very Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq12" ng-value="'3'" required><img src="IcoMoon-Free-master/PNG/32px/226-smile.png"> Good</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq12" ng-value="'2'" required><img src="IcoMoon-Free-master/PNG/32px/248-neutral.png"> Satisfy</ion-radio>
+<ion-radio name="q1" ng-model="data.choiceq12" ng-value="'1'" required><img src="IcoMoon-Free-master/PNG/32px/238-angry.png"> Less Satisfy</ion-radio>
 </div>
  
    </div>
@@ -349,15 +348,15 @@
          <p>
       <div class="card">
        <div class="item item-divider item-text-wrap">
-       <h1> Cadangan/Penambahbaikan</h1>
+       <h1> Suggestion/Improvement</h1>
        <br>
-         Jika anda mempunyai sebarang cadangan/penambaikan sila isi dibahagian yang telah disediakan. 
+         If you have any suggestions / improvements please fill in the field provided. 
            </div>
 <div class="item item-text-wrap">
  <textarea class="boxsizingBorder" ng-model="data.qcadangan" > </textarea>
 </div>
  <div class="item item-divider">
-     <button class="button button-calm button-block" ng-click="appButang(data); appButang2(data);" ng-disabled="keneIsi.$invalid">Klik untuk Hantar</button>
+     <button class="button button-calm button-block" ng-click="appButang(data); appButang2(data);" ng-disabled="keneIsi.$invalid">Click to Submit</button>
    </div>
    </div>
 </p>

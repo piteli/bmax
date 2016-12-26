@@ -3,11 +3,11 @@
 <ion-nav-buttons side="left">
           <button class="button button-light button-clear no-animation marginsenget"
                   ng-click="startApp()" ng-show="!slideIndex">
-            Hiraukan
+            Skip
           </button>
           <button class="button icon-left ion-chevron-left button-light button-clear no-animation marginsenget"
                   ng-click="previous()" ng-show="slideIndex > 0">
-            Kembali
+            Back
           </button>
         </ion-nav-buttons>
 
@@ -15,7 +15,7 @@
 <ion-nav-buttons side="right"> 
           <button class="button icon-right ion-chevron-right button-light button-clear no-animation"
                   ng-click="next()" ng-show="slideIndex != 2">
-            Seterusnya
+            Next
           </button>
           <button class="button button-light button-clear no-animation"
                   ng-click="startApp()" ng-show="slideIndex == 2">
@@ -38,10 +38,10 @@
 
       <center><img src="img/form.png"/></center>
       
-         <h2 class="titleBox1 ">Selamat Datang ke Aplikasi Mudah Alih BMAX!</h2>
+         <h2 class="titleBox1 ">Welcome to the Mobile Application BMAX!</h2>
 
       <p class="textBox1">
-      Aplikasi mudah alih ini adalah untuk peserta kursus bagi Penilaian Keberkesanan Latihan. Perkhidmatan ini menawarkan pengisian secara mudah alih. Klik seterusnya untuk panduan berikutnya. </p>
+      This mobile application is for participants's Training Effectiveness Evaluation. This service offer evaluate through app. Click Next to the next guide. </p>
       </div>
 
    </ion-slide>
@@ -50,19 +50,19 @@
       <div class = "box box2">
       <center><img src="img/bulb.png"/></center>
 
-         <h1 class="titleBox1">Perhatian!</h1>
-         <p class="textBox1">Permulaan anda perlu mengisi maklumat anda seperti nama penuh, no kakitangan, bahagian dan pusat pengajian. Anda juga dikehendaki membuat kaji selidik untuk memberi ulasan     tentang kualiti keberkesanan program yang dianjurkan. Sila klik butang MULA untuk mula menjawab.</p>
+         <h1 class="titleBox1">Attention!</h1>
+         <p class="textBox1">Firstly, you need to fill in your information such as your full name, no/id, and prefer course before begin evaluate. suggestion/improvement field are optional. Please answers with honest and sincerely to ensure the workshop/course's effectiveness. Click the START button to begin evaluation.</p>
       </div>
    </ion-slide>
 
    <ion-slide class="background padding">
       <div class = "box box3">
       <center><img src="img/check.png"/></center>
-         <h1 class="titleBox1">Jom Klik!</h1>
-         <p class="textBox1">Sila PILIH SATU daripada empat pilihan yang diberikan.</p>
-          <button class="button button-block button-large button-energized" ng-click="mula()">Klik untuk mula!</button>
-      <p class="titleBox1">Sekiranya anda adalah admin..klik di bawah</p>
-      <button class="button button-block button-small" ng-click="loginAdmin()">Klik untuk Admin</button>
+         <h1 class="titleBox1">Let's Bmax!</h1>
+         <p class="textBox1">Please choose one of the four options given.</p>
+          <button class="button button-block button-large button-energized" ng-click="mula()">Click to begin!</button>
+      <p class="titleBox1">If you are admin..click below</p>
+      <button class="button button-block button-small" ng-click="loginAdmin()">Admin Here</button>
       
       </div>
    </ion-slide>
