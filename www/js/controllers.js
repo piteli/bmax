@@ -144,7 +144,7 @@ angular.module('controller',['ionic.cloud'])
 
 .controller('appCtrl', function($location,$scope, $state, $http,$ionicHistory, $ionicPopup,$ionicLoading,$ionicSlideBoxDelegate) {
 
-  console.log(sessionStorage.getItem('loggedin_role') == R0leb4U);
+  console.log(sessionStorage.getItem('loggedin_role') == "R0leb4U");
 
 $scope.array = []; 
 
@@ -259,7 +259,7 @@ $scope.array = [];
 
 .controller('DashCtrl', function($location,$scope,$state,$ionicPush,$http,$cordovaToast,$ionicPopup){
 
-  if(sessionStorage.getItem('loggedin_role') == R0leb4U){
+  if(sessionStorage.getItem('loggedin_role') == "R0leb4U"){
 
   var xhr = $http({
       method: 'post',
@@ -337,7 +337,7 @@ else {
 
 .controller('dataCtrl', function($location,$scope,$state,$http,$ionicHistory,$ionicPopup){
 
-if(sessionStorage.getItem('loggedin_role') == R0leb4U){
+if(sessionStorage.getItem('loggedin_role') == "R0leb4U"){
   var xhr = $http({
       method: 'post',
       url: 'http://bmax.000webhostapp.com/getList.php'
@@ -418,7 +418,7 @@ else{
 
 .controller('FriendDetailCtrl', function($location,$scope,$state,$stateParams,$http,$cordovaToast,$ionicPopup){
 
-  if(sessionStorage.getItem('loggedin_role') == R0leb4U){
+  if(sessionStorage.getItem('loggedin_role') == "R0leb4U"){
 
  $scope.met = $stateParams.Nama;
  $scope.result11 = ' -';
@@ -1342,7 +1342,7 @@ $scope.doRefresh = function() {
 
 .controller('kursusCtrl', function($location,$scope, $state, $http,$ionicHistory, $ionicPopup,$ionicLoading,$ionicSlideBoxDelegate,$filter,$ionicActionSheet,$cordovaCamera,$cordovaDevice,$cordovaFile,$cordovaFileTransfer) {
 
-  if(sessionStorage.getItem('loggedin_role') == R0leb4U){
+  if(sessionStorage.getItem('loggedin_role') == "R0leb4U"){
 
   $scope.array = []; 
   $scope.image = null;
@@ -1721,7 +1721,7 @@ $scope.uploadImage = function() {
 
 .controller('bgCtrl', function($location,$scope, $state, $http,$ionicHistory, $ionicPopup,$ionicLoading,$ionicSlideBoxDelegate,$ionicActionSheet,$cordovaCamera,$cordovaDevice,$cordovaFile,$cordovaFileTransfer,$ionicLoading) {
 
-  if(sessionStorage.getItem('loggedin_role') == R0leb4U){
+  if(sessionStorage.getItem('loggedin_role') == "R0leb4U"){
 
     $scope.patahBalik = function(){
     $state.go('slide');
